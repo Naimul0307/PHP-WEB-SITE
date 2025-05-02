@@ -1,0 +1,187 @@
+/* Center body vertically and horizontally */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-image: url('landscape-bg.jpg'); /* Default (portrait fallback) */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    flex-direction: column;
+}
+
+h2 {
+    font-size: 24px;
+    color: #f8981d;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    background-image: url('logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0 0 20px #f8981d;
+    background-color: #58c0ec88;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.form-field {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+label {
+    font-size: 18px;
+    color: #fa8f03da;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #00abf5;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #f8981d;
+    font-weight: bold;
+}
+
+input[type="submit"] {
+    background-color: #f1ac52;
+    color: #00abf5;
+    font-weight: bold;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.error {
+    color: #f1ac52;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.popup {
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    animation: fadeInOut 3s forwards;
+}
+
+@keyframes fadeInOut {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+/* Portrait Mode Background (1080x1920) */
+@media screen and (orientation: portrait) {
+    body {
+        background-image: url('portrait-bg.jpg'); /* Replace with your portrait image */
+    }
+}
+
+/* Landscape Mode Background (1920x1080) */
+@media screen and (orientation: landscape) {
+    body {
+        background-image: url('landscape-bg.jpg'); /* Replace with your landscape image */
+    }
+}
+
+/* Responsive Design for Screens <= 480px */
+@media (max-width: 480px) {
+    form {
+        padding: 15px;
+        width: 100%;
+    }
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+    input[type="text"],
+    input[type="email"] {
+        padding: 12px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px 20px;
+    }
+    .error {
+        font-size: 12px;
+    }
+}
+
+/* Responsive Design for Screens 481px to 768px */
+@media (max-width: 768px) {
+    form {
+        padding: 20px;
+        width: 90%;
+    }
+    .logo {
+        width: 130px;
+        height: 130px;
+    }
+    input[type="text"],
+    input[type="email"] {
+        padding: 12px;
+    }
+    input[type="submit"] {
+        width: 100%;
+        padding: 12px 20px;
+    }
+}
+
+/* Responsive Design for Larger Screens >= 1024px */
+@media (min-width: 1024px) {
+    form {
+        width: 50%;
+    }
+    .logo {
+        width: 180px;
+        height: 180px;
+    }
+    input[type="text"],
+    input[type="email"] {
+        padding: 14px;
+    }
+    input[type="submit"] {
+        padding: 14px 30px;
+    }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+</head> 
+<body>
+    <div class="logo"></div>
+
+    <h2>Submit Your Details</h2>
+    <form id="dataForm" onsubmit="submitForm(event)">
+        <div class="form-field">
+            <label>Name:</label><br>
+            <input type="text" name="name" id="name" placeholder="Enter Your Name"><br>
+            <span class="error" id="nameError"></span>
+        </div>
+    
+        <div class="form-field">
+            <label>Mobile:</label><br>
+            <input type="text" name="mobile" id="mobile" placeholder="Enter Your Mobile Number"><br>
+            <span class="error" id="mobileError"></span>
+        </div>
+    
+        <div class="form-field">
+            <label>Email:</label><br>
+            <input type="email" name="email" id="email" placeholder="Enter Your Email"><br>
+            <span class="error" id="emailError"></span>
+        </div>
+    
+        <input type="submit" value="Submit">
+    </form>
+    
+    <div id="popup" class="popup">Data saved successfully!</div>
+</body>
+<script src="script.js"></script>
+</html>
